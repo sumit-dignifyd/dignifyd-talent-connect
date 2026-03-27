@@ -1,28 +1,36 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function SmoothFollower() {
-  const mousePosition = useRef({ x: 0, y: 0 });
-  const dotPosition = useRef({ x: 0, y: 0 });
-  const borderDotPosition = useRef({ x: 0, y: 0 });
+  const dotRef = useRef(null);
+  const borderRef = useRef(null);
 
-  const [renderPos, setRenderPos] = useState({
-    dot: { x: 0, y: 0 },
-    border: { x: 0, y: 0 },
-  });
+  const mouse = useRef({ x: 0, y: 0 });
+  const dot = useRef({ x: 0, y: 0 });
+  const border = useRef({ x: 0, y: 0 });
 
-  const [isHovering, setIsHovering] = useState(false);
+  const isHovering = useRef(false);
 
-  const DOT_SMOOTHNESS = 0.2;
-  const BORDER_DOT_SMOOTHNESS = 0.1;
+  const DOT_SPEED = 0.25;
+  const BORDER_SPEED = 0.12;
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      mousePosition.current = { x: e.clientX, y: e.clientY };
+      mouse.current.x = e.clientX;
+      mouse.current.y = e.clientY;
     };
 
-    const handleMouseEnter = () => setIsHovering(true);
-    const handleMouseLeave = () => setIsHovering(false);
+    const handleMouseEnter = () => {
+      isHovering.current = true;
+      borderRef.current.style.width = "44px";
+      borderRef.current.style.height = "44px";
+    };
+
+    const handleMouseLeave = () => {
+      isHovering.current = false;
+      borderRef.current.style.width = "28px";
+      borderRef.current.style.height = "28px";
+    };
 
     window.addEventListener("mousemove", handleMouseMove);
 
@@ -30,91 +38,65 @@ export default function SmoothFollower() {
       "a, button, img, input, textarea, select",
     );
 
-    interactiveElements.forEach((element) => {
-      element.addEventListener("mouseenter", handleMouseEnter);
-      element.addEventListener("mouseleave", handleMouseLeave);
+    interactiveElements.forEach((el) => {
+      el.addEventListener("mouseenter", handleMouseEnter);
+      el.addEventListener("mouseleave", handleMouseLeave);
     });
 
+    const lerp = (start, end, factor) => start + (end - start) * factor;
+
     const animate = () => {
-      const lerp = (start, end, factor) => start + (end - start) * factor;
+      dot.current.x = lerp(dot.current.x, mouse.current.x, DOT_SPEED);
+      dot.current.y = lerp(dot.current.y, mouse.current.y, DOT_SPEED);
 
-      dotPosition.current.x = lerp(
-        dotPosition.current.x,
-        mousePosition.current.x,
-        DOT_SMOOTHNESS,
-      );
+      border.current.x = lerp(border.current.x, mouse.current.x, BORDER_SPEED);
+      border.current.y = lerp(border.current.y, mouse.current.y, BORDER_SPEED);
 
-      dotPosition.current.y = lerp(
-        dotPosition.current.y,
-        mousePosition.current.y,
-        DOT_SMOOTHNESS,
-      );
+      if (dotRef.current) {
+        dotRef.current.style.transform = `translate3d(${dot.current.x}px, ${dot.current.y}px, 0)`;
+      }
 
-      borderDotPosition.current.x = lerp(
-        borderDotPosition.current.x,
-        mousePosition.current.x,
-        BORDER_DOT_SMOOTHNESS,
-      );
-
-      borderDotPosition.current.y = lerp(
-        borderDotPosition.current.y,
-        mousePosition.current.y,
-        BORDER_DOT_SMOOTHNESS,
-      );
-
-      setRenderPos({
-        dot: { x: dotPosition.current.x, y: dotPosition.current.y },
-        border: {
-          x: borderDotPosition.current.x,
-          y: borderDotPosition.current.y,
-        },
-      });
+      if (borderRef.current) {
+        borderRef.current.style.transform = `translate3d(${border.current.x}px, ${border.current.y}px, 0)`;
+      }
 
       requestAnimationFrame(animate);
     };
 
-    const animationId = requestAnimationFrame(animate);
+    animate();
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
 
-      interactiveElements.forEach((element) => {
-        element.removeEventListener("mouseenter", handleMouseEnter);
-        element.removeEventListener("mouseleave", handleMouseLeave);
+      interactiveElements.forEach((el) => {
+        el.removeEventListener("mouseenter", handleMouseEnter);
+        el.removeEventListener("mouseleave", handleMouseLeave);
       });
-
-      cancelAnimationFrame(animationId);
     };
   }, []);
-
-  if (typeof window === "undefined") return null;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-50">
       <div
-        className="absolute rounded-full"
+        ref={dotRef}
+        className="absolute w-2 h-2 rounded-full"
         style={{
-          width: "8px",
-          height: "8px",
-          transform: "translate(-50%, -50%)",
-          left: `${renderPos.dot.x}px`,
-          top: `${renderPos.dot.y}px`,
+          transform: "translate3d(0,0,0)",
           background: "linear-gradient(135deg,#ac4bff,#e12afb,#f6339a)",
           boxShadow: "0 0 10px #ac4bff",
         }}
       />
 
       <div
+        ref={borderRef}
         className="absolute rounded-full"
         style={{
-          width: isHovering ? "44px" : "28px",
-          height: isHovering ? "44px" : "28px",
-          transform: "translate(-50%, -50%)",
-          left: `${renderPos.border.x}px`,
-          top: `${renderPos.border.y}px`,
+          width: "28px",
+          height: "28px",
           border: "2px solid #ac4bff",
-          boxShadow: "0 0 12px rgba(172,75,255,0.6)",
+          transform: "translate3d(0,0,0)",
           transition: "width 0.3s, height 0.3s",
+          boxShadow: "0 0 12px rgba(172,75,255,0.6)",
         }}
       />
     </div>
