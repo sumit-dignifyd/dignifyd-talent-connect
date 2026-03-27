@@ -64,13 +64,13 @@ export default function OurPresence() {
                 <div className="flex items-start gap-3">
                   <span className="mt-1 h-4 w-[2px] bg-purple-500"></span>
                   <span>
-                    {currentPlace?.location} 4 Winsley Street London W1W 8HF
+                    {currentPlace?.location}
                   </span>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <span className="mt-1 h-4 w-[2px] bg-purple-500"></span>
-                  <span>{currentPlace?.contact} +44-738-030-7979</span>
+                  <span>{currentPlace?.contact}</span>
                 </div>
 
                 <div className="flex items-start gap-3">
@@ -83,7 +83,7 @@ export default function OurPresence() {
             </div>
           </div>
 
-          <div className="relative h-[260px] w-full overflow-hidden rounded-r-[24px] rounded-l-none md:h-[290px]">
+          <div className="relative h-[260px] w-full overflow-hidden rounded-r-[24px] rounded-l-none md:h-[289px]">
             <Image
               src={currentPlace?.image}
               alt="presence"
