@@ -1,0 +1,26 @@
+.footerLink {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: white;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background: linear-gradient(to right, #a855f7, #ec4899);
+    transition: all 0.3s ease;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+

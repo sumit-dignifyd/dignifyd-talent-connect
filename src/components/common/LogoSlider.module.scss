@@ -1,0 +1,48 @@
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, #000, transparent);
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, #000, transparent);
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  gap: 60px;
+  align-items: center;
+  animation: scroll 30s linear infinite;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: max-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
