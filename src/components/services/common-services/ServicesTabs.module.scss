@@ -1,0 +1,28 @@
+.serviceTabs {
+  &__btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+
+    @media (min-width: 768px) {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.875rem;
+    }
+
+    &--active {
+      background: linear-gradient(to right, #a855f7, #ec4899);
+      color: white;
+    }
+
+    &--inactive {
+      color: #9ca3af;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
