@@ -43,11 +43,13 @@ export default function Banner({
           {description}
         </p>
 
-        <div className="mt-8">
-          <button className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white cursor-pointer">
-            {btn_text}
-          </button>
-        </div>
+        {btn_text && (
+          <div className="mt-8">
+            <button className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white cursor-pointer">
+              {btn_text}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
