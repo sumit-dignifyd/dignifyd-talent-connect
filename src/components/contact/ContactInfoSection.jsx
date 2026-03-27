@@ -5,17 +5,20 @@ const cardInfo = [
   {
     icon: Mail,
     title: "Chat to me",
-    description: "hello@dignifyd.tech",
+    description: "hello@dignifydtalentconnect.com",
+    href: "mailto:hello@dignifydtalentconnect.com",
   },
   {
     icon: LocationEdit,
     title: "Visit my office",
     description: "Ground floor, Upper, C64, C Block, Sector 2,",
+    href: "https://maps.google.com/?q=Dignifyd+Talent+Connect",
   },
   {
     icon: Phone,
     title: "Call me!",
     description: "+996 7852 XXXX XXX",
+    href: "tel:+9967852XXXXXXX",
   },
 ];
 
@@ -31,6 +34,7 @@ export default function ContactInfoSection() {
               icon={<Icon size={30} className="text-purple-500" />}
               title={item.title}
               description={item.description}
+              href={item.href}
             />
           );
         })}
