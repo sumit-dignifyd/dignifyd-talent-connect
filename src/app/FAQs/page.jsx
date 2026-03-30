@@ -3,17 +3,11 @@ import FAQForm from "@/components/FAQs/FAQForm";
 import Banner from "@/components/home/Banner";
 import { hrFAQs } from "@/data/faqs";
 
-export async function generateMetadata() {
-  return {
-    title: "FAQ - My Website",
-    description: "Get answers to frequently asked questions.",
-  };
-}
-
 const FAQPage = () => {
   return (
     <>
       <Banner
+      banner_bg={null}
         badge={"Query Guide"}
         leading_text={"Frequently Asked"}
         supporting_text={"Questions"}
