@@ -4,6 +4,7 @@ export const NAV_LINKS = [
   { label: "Careers", path: "/careers" },
   { label: "Services", path: "/services" },
   { label: "Contact", path: "/contact" },
+  { label: "FAQs", path: "/FAQs" },
 ];
 
 export const tabs = [
@@ -53,7 +54,7 @@ export const recruitmentLinks = [
   { name: "Help Desk", href: "#" },
   { name: "IT Support", href: "#" },
   { name: "Application Process", href: "#" },
-  { name: "Job Openings", href: "#" },
+  { name: "Job Openings", href: "/careers", hash: "#jobs" },
   { name: "FInternship ProgramsAQ", href: "#" },
 ];
 
