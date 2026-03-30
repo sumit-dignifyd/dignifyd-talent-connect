@@ -1,6 +1,6 @@
 import LogoSlider from "../common/LogoSlider";
 import SectionHeader from "../common/SectionHeader";
-import { logos } from "@/data/logos";
+import {TechSupportLogo } from "@/data/logos";
 const TechSupport = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const TechSupport = () => {
           "Our stack tech supports real time sourcing, AI screening, compliance tracking, and analytics dashboard."
         }
       />
-      <LogoSlider logos={logos} />
+      <LogoSlider logos={TechSupportLogo} />
     </>
   );
 };
