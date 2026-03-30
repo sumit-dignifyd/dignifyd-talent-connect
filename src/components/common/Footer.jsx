@@ -88,7 +88,14 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               {recruitmentLinks.map((item, i) => (
                 <li key={i}>
-                  <Link href={item.href} className={styles?.footerLink}>
+                  <Link
+                    href={
+                      item.hash
+                        ? { pathname: item.href, hash: item.hash }
+                        : item.href
+                    }
+                    className={styles?.footerLink}
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -115,10 +122,7 @@ export default function Footer() {
                       {item.label}
                     </a>
                   ) : (
-                    <Link
-                      href={item.href}
-                      className="underline"
-                    >
+                    <Link href={item.href} className="underline">
                       {item.label}
                     </Link>
                   )}
