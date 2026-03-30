@@ -10,23 +10,27 @@ import rohitesh from "../assets/images/aboutUs/rohitesh.png";
 import shareen from "../assets/images/aboutUs/shareen.png";
 import uday from "../assets/images/aboutUs/uday.png";
 import utsav from "../assets/images/aboutUs/utsav.png";
-
+import muskan from "../assets/images/aboutUs/muskan.png";
 export const leadershipTeam = [
   {
     img: pavaan,
     name: "Pavaan Ahuja",
+    role: "Group CEO",
   },
   {
     img: yogesh,
-    name: "Yogesh",
+    name: "Yogesh Tyagi",
+    role: "VP, Global Recruitment Ops",
   },
   {
     img: mandeep,
-    name: "Mandeep",
+    name: "Mandeep Multani",
+    role: "Director, Global Recruitment",
   },
   {
     img: sahil,
-    name: "Sahil",
+    name: "Sahil Lad",
+    role: "Head Global Sales",
   },
 ];
 
@@ -34,41 +38,51 @@ export const ourBrandTeam = [
   {
     img: shivi,
     name: "Shivi Solanki",
+    role: "Compliance Officer",
   },
   {
     img: ashish,
-    name: "Ashish",
+    name: "Ashish Tyagi",
+    role: "Talent Acquisition Executive",
   },
   {
     img: krishna,
-    name: "Krishna",
+    name: "Krishna Gupta",
+    role: "Talent Acquisition Executive",
   },
   {
     img: purvi,
-    name: "Purvi",
+    name: "Purvi Gupta",
+    role: "Talent Acquisition Executive",
   },
   {
     img: rohitesh,
-    name: "Rohitesh",
+    name: "Rohitesh Rathod",
+    role: "Sr. Manager Business Dev.",
   },
   {
     img: shareen,
-    name: "Shareen",
+    name: "Shareen Rasool",
+    role: "Team Lead Talent Acquisition",
   },
   {
     img: uday,
-    name: "Uday",
+    name: "Udaytanshu Aggarwal",
+    role: "Business Dev. Executive",
   },
   {
     img: utsav,
-    name: "Utsav",
+    name: "Utsav Tyagi",
+    role: "Talent Acquisition Executive",
   },
   {
-    img: yogesh,
-    name: "Yogesh",
+    img: muskan,
+    name: "Muskan Shah",
+    role: "Sr. Talent Acquisition",
   },
   {
     img: sahil,
-    name: "Sahil",
+    name: "Sahil Lad",
+    role: "Head Global Sales",
   },
 ];
