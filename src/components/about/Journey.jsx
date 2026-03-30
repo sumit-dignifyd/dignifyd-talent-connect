@@ -1,3 +1,4 @@
+import { Timer } from "lucide-react";
 import SectionHeader from "../common/SectionHeader";
 import styles from "./Journey.module.scss";
 
@@ -60,7 +61,7 @@ export default function Journey() {
 
                 <div className="absolute left-4 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2">
                   <div className="animate-glow flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 text-sm font-semibold text-white shadow-[0_0_25px_rgba(168,85,247,0.5)] md:h-12 md:w-12">
-                    {item.id}
+                     <Timer />
                   </div>
                 </div>
               </div>
