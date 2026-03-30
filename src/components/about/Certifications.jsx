@@ -3,8 +3,11 @@ import Image from "next/image";
 import gdpr from "../../assets/images/aboutUs/GDPR.png";
 import iso from "../../assets/images/aboutUs/ISO.png";
 import EQOC from "../../assets/images/aboutUs/EQOC.png";
+import audit from "../../assets/images/aboutUs/audit.png";
+import visa from "../../assets/images/aboutUs/visa.png";
+import lawbour_law_guide from "../../assets/images/aboutUs/labour-law-guide.png";
 
-const certificatesLogos = [gdpr, EQOC, iso, EQOC, gdpr, iso];
+const certificatesLogos = [gdpr, EQOC, iso, visa, lawbour_law_guide, audit];
 
 export default function Certifications() {
   return (
