@@ -9,7 +9,7 @@ export default function Banner({
   btn_text,
 }) {
   return (
-    <section className="relative flex w-full items-center justify-center overflow-hidden py-20">
+    <section className="relative flex w-full items-center justify-center overflow-hidden py-20 mt-15">
       <div className="absolute inset-0">
         {banner_bg && (
           <div className="absolute inset-0">
