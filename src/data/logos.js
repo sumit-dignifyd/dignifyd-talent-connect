@@ -18,6 +18,20 @@ import roca from "../assets/images/home/roca.webp";
 import cordelia from "../assets/images/home/cordelia-cruises.webp";
 import ICCPL from "../assets/images/home/ICCPL.webp";
 import aminu from "../assets/images/home/aminu.png";
+import msOffice from "../assets/images/aboutUs/office-365.png";
+import zoho from "../assets/images/aboutUs/zoho.png";
+import hubshot from "../assets/images/aboutUs/hubspot.png";
+import apollo from "../assets/images/aboutUs/apollo.png";
+import lusha from "../assets/images/aboutUs/lusha.png";
+import copilot from "../assets/images/aboutUs/copilot.png";
+import gemini from "../assets/images/aboutUs/gemini.png";
+import perplexity from "../assets/images/aboutUs/perplexity.png";
+import naukri from "../assets/images/aboutUs/naukri.png";
+import monster from "../assets/images/aboutUs/monster.png";
+import indeed from "../assets/images/aboutUs/indeed.png";
+import chatGPT from "../assets/images/aboutUs/chatGPT.png";
+import linkedin from "../assets/images/aboutUs/linkedin.png";
+import salesForce from "../assets/images/aboutUs/salesforce.png";
 
 export const logos = [
   oppo,
@@ -40,4 +54,21 @@ export const logos = [
   cordelia,
   ICCPL,
   aminu,
+];
+
+export const TechSupportLogo = [
+  msOffice,
+  zoho,
+  hubshot,
+  apollo,
+  lusha,
+  copilot,
+  gemini,
+  perplexity,
+  naukri,
+  monster,
+  indeed,
+  chatGPT,
+  linkedin,
+  salesForce,
 ];
