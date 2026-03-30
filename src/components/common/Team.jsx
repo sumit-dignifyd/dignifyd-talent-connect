@@ -27,7 +27,7 @@ export default function Team({ badge, title, description, team }) {
                 <h3 className="text-white text-lg font-semibold">
                   {member?.name}
                 </h3>
-                {/* <p className="text-sm text-gray-300"></p> */}
+                <p className="text-sm text-gray-300">{member?.role}</p>
               </div>
             </div>
           ))}
