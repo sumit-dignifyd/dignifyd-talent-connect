@@ -5,25 +5,25 @@ import { Check } from "lucide-react";
 export default function FeaturesAndList({ features, featuredImages }) {
   return (
     <section className="w-full bg-black">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+      <div className="mx-auto grid max-w-7xl items-start gap-12 md:grid-cols-2">
         <div>
-          <div className="flex gap-6 mb-10 flex-wrap md:flex-nowrap">
-            <div className="relative w-[260px] h-[150px] rounded-2xl overflow-hidden">
+          <div className="mb-10 flex flex-col gap-6 md:flex-row md:flex-nowrap">
+            <div className="relative h-[180px] w-full overflow-hidden rounded-2xl md:h-[150px] md:w-[260px]">
               <Image
                 src={featuredImages[0]}
                 alt="meeting"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 260px"
                 className="object-cover"
               />
             </div>
 
-            <div className="relative w-[260px] h-[150px] rounded-2xl overflow-hidden">
+            <div className="relative h-[180px] w-full overflow-hidden rounded-2xl md:h-[150px] md:w-[260px]">
               <Image
                 src={featuredImages[1]}
                 alt="discussion"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 260px"
                 className="object-cover"
               />
             </div>
@@ -32,11 +32,11 @@ export default function FeaturesAndList({ features, featuredImages }) {
           <div className="space-y-5">
             {features.map((item, i) => (
               <div key={i} className="flex items-start gap-4">
-                <div className="min-w-[28px] h-[28px] rounded-full border border-purple-500 flex items-center justify-center">
+                <div className="flex h-[28px] min-w-[28px] items-center justify-center rounded-full border border-purple-500">
                   <Check size={16} className="text-purple-400" />
                 </div>
 
-                <p className="text-gray-300 text-sm leading-relaxed">{item}</p>
+                <p className="text-sm leading-relaxed text-gray-300">{item}</p>
               </div>
             ))}
           </div>
