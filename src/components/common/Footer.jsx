@@ -1,8 +1,8 @@
 import Image from "next/image";
-import logo from "../../assets/images/home/dignifyd-logo-white.png";
-import x_logo from "../../assets/images/home/X.png";
-import gitHub_logo from "../../assets/images/home/git-Hub.png";
-import linkedin_logo from "../../assets/images/home/Linkedin.png";
+import logo from "../../assets/images/home/footer/dignifyd-logo-white.png";
+import x_logo from "../../assets/images/home/footer/X.png";
+// import gitHub_logo from "../../assets/images/home/git-Hub.png";
+import linkedin_logo from "../../assets/images/home/footer/Linkedin.png";
 import Link from "next/link";
 import styles from "../common/Footer.module.scss";
 import {
@@ -18,14 +18,16 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 md:grid-cols-5">
           <div className="space-y-6">
-            <Image
-              src={logo}
-              alt="Dignifyd Logo"
-              width={120}
-              height={32}
-              priority
-              className="h-10 w-auto"
-            />
+            <Link href="/" className="flex items-center">
+              <Image
+                src={logo}
+                alt="Dignifyd Logo"
+                width={120}
+                height={32}
+                priority
+                className="h-10 w-auto"
+              />
+            </Link>
 
             <p className="max-w-xs text-sm leading-relaxed text-gray-400">
               Discover a hiring experience built for modern businesses. From
@@ -34,7 +36,7 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-4">
-              {[x_logo, gitHub_logo, linkedin_logo].map((item, i) => (
+              {[x_logo, linkedin_logo].map((item, i) => (
                 <div
                   key={i}
                   className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 shadow-[0_0_20px_rgba(168,85,247,0.3)] transition hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]"
@@ -122,7 +124,7 @@ export default function Footer() {
                       {item.label}
                     </a>
                   ) : (
-                    <Link href={item.href} className="underline">
+                    <Link href={item.href} target="_blank" className="underline">
                       {item.label}
                     </Link>
                   )}
