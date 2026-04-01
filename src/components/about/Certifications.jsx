@@ -1,13 +1,20 @@
 import SectionHeader from "../common/SectionHeader";
 import Image from "next/image";
-import gdpr from "../../assets/images/aboutUs/GDPR.png";
-import iso from "../../assets/images/aboutUs/ISO.png";
-import EQOC from "../../assets/images/aboutUs/EQOC.png";
-import audit from "../../assets/images/aboutUs/audit.png";
-import visa from "../../assets/images/aboutUs/visa.png";
-import lawbour_law_guide from "../../assets/images/aboutUs/labour-law-guide.png";
+import gdpr from "../../assets/images/aboutUs/certificates/GDPR.png";
+import iso from "../../assets/images/aboutUs/certificates/ISO.png";
+import EQOC from "../../assets/images/aboutUs/certificates/EQOC.png";
+import audit from "../../assets/images/aboutUs/certificates/audit.png";
+import visa from "../../assets/images/aboutUs/certificates/visa.png";
+import labour_law_guide from "../../assets/images/aboutUs/certificates/labour-law-guide.png";
 
-const certificatesLogos = [gdpr, EQOC, iso, visa, lawbour_law_guide, audit];
+const certificatesLogos = [
+  { logo: gdpr, name: "GDPR Compliance" },
+  { logo: EQOC, name: "EQOC Certification" },
+  { logo: iso, name: "ISO Certification" },
+  { logo: visa, name: "Local Visa Compliance" },
+  { logo: labour_law_guide, name: "Labour Law Guidance" },
+  { logo: audit, name: "On-Site Audit" },
+];
 
 export default function Certifications() {
   return (
@@ -19,19 +26,25 @@ export default function Certifications() {
         />
 
         <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-6">
-          {certificatesLogos.map((logo, i) => (
+          {certificatesLogos.map((item, i) => (
             <div
               key={i}
-              className="group rounded-2xlborder bg-white/[0.02]backdrop-blur-xl hover:shadow-[0_0_30px_rgba(168,85,247,0.25) flex h-40 items-center justify-center border-white/10 transition-all duration-300 hover:border-purple-500/30"
+              className="group relative flex h-40 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-xl transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_0_35px_rgba(168,85,247,0.25)]"
             >
-              <div className="relative h-30 w-30 overflow-hidden rounded-full md:h-47 md:w-47">
+              <div className="relative h-24 w-24 overflow-hidden rounded-full md:h-32 md:w-32">
                 <Image
-                  src={logo}
-                  alt={`${logo}-certification`}
+                  src={item.logo}
+                  alt={item.name}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
+              </div>
+
+              <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black/70 opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:opacity-100">
+                <p className="px-3 text-center text-sm font-semibold text-white">
+                  {item.name}
+                </p>
               </div>
             </div>
           ))}
