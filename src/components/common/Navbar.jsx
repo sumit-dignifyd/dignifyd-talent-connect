@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-import logo from "../../assets/images/home/dignifyd-logo-white.png";
+import logo from "../../assets/images/home/footer/dignifyd-logo-white.png";
 import { NAV_LINKS } from "@/data/navigation";
 
 export default function Navbar() {
@@ -14,7 +14,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-black/70 backdrop-blur-xl">
+    <header
+      className={`fixed top-0 left-0 z-50 w-full transition ${open ? "bg-black" : "bg-black md:bg-black/70 md:backdrop-blur-xl"}`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <Link href="/" className="flex items-center">
           <Image
@@ -35,11 +37,7 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 href={link.path}
-                className={`text-sm transition ${
-                  isActive
-                    ? "text-purple-500"
-                    : "text-gray-300 hover:text-white"
-                }`}
+                className={`text-sm transition ${isActive ? "text-purple-500" : "text-gray-300 hover:text-white"}`}
               >
                 {link.label}
               </Link>
@@ -48,7 +46,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <button className="relative rounded-full px-5 py-2 text-sm text-white">
+          <button className="relative rounded-full px-5 py-2 text-sm text-white cursor-pointer">
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
             <span className="absolute inset-[1px] rounded-full bg-black"></span>
             <span className="relative z-10">Work With Us</span>
@@ -62,15 +60,11 @@ export default function Navbar() {
 
       <div
         onClick={() => setOpen(false)}
-        className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
-          open ? "visible opacity-100" : "invisible opacity-0"
-        }`}
+        className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${open ? "visible opacity-100" : "invisible opacity-0"}`}
       />
 
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-[80%] max-w-sm transform bg-black/95 px-6 py-6 backdrop-blur-xl transition-transform duration-300 md:hidden ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 z-50 h-full w-[80%] max-w-sm transform bg-black/95 px-6 py-6 backdrop-blur-xl transition-transform duration-300 md:hidden ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="mb-8 flex items-center justify-between">
           <Image
@@ -95,19 +89,17 @@ export default function Navbar() {
                 key={item.path}
                 href={item.path}
                 onClick={() => setOpen(false)}
-                className={`text-base transition ${
-                  isActive
-                    ? "text-purple-500"
-                    : "text-gray-300 hover:text-white"
-                }`}
+                className={`text-base transition ${isActive ? "text-purple-500" : "text-gray-300 hover:text-white"}`}
               >
                 {item.label}
               </Link>
             );
           })}
 
-          <button className="mt-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-5 py-3 text-sm text-white ">
-            Work With Us
+          <button className="relative mt-6 rounded-full px-5 py-3 text-sm text-white cursor-pointer">
+            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
+            <span className="absolute inset-[1px] rounded-full bg-black"></span>
+            <span className="relative z-10">Work With Us</span>
           </button>
         </div>
       </div>
