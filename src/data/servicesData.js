@@ -1,17 +1,16 @@
-import globalRecruitment from "../assets/images/home/presence-frame.png";
-import rpo_solution from "../assets/images/services/rpoSolutions.jpg";
-import employer_branding from "../assets/images/services/employer-branding.jpg";
-import hr_Consulting from "../assets/images/services/hr-consulting.jpg";
-import onboarding_support from "../assets/images/services/onboarding-support.jpg";
-import bottomVisual from "../assets/images/services/glow.gif";
-import global_recruitment1 from "../assets/images/services/global-recruitment1.png";
-import global_recruitment2 from "../assets/images/services/global-recruitment2.png";
-import employer_branding1 from "../assets/images/services/employer-branding1.jpg";
-import employer_branding2 from "../assets/images/services/employer-branding2.jpg";
-import hr_consulting1 from "../assets/images/services/hr-consulting1.jpg";
-import hr_consulting2 from "../assets/images/services/hr-consulting2.jpg";
-import rpo_solutions1 from "../assets/images/services/rpo-solutions1.png";
-import rpo_solutions2 from "../assets/images/services/rpo-solutions2.png";
+import globalRecruitment from "../assets/images/home/globalPresence/presence-frame.png";
+import rpo_solution from "../assets/images/services/banner/rpo-solutions/rpoSolutions.jpg";
+import employer_branding from "../assets/images/services/banner/employer-branding/employer-branding.jpg";
+import hr_Consulting from "../assets/images/services/banner/hr-consulting/hr-consulting.jpg";
+import onboarding_support from "../assets/images/services/banner/onboarding-support/onboarding-support.jpg";
+import global_recruitment1 from "../assets/images/services/features/global-recruitment/global-recruitment1.png";
+import global_recruitment2 from "../assets/images/services/features/global-recruitment/global-recruitment2.png";
+import employer_branding1 from "../assets/images/services/features/employer-branding/employer-branding1.jpg";
+import hr_consulting1 from "../assets/images/services/features/hr-consulting/hr-consulting1.jpg";
+import hr_consulting2 from "../assets/images/services/features/hr-consulting/hr-consulting2.jpg";
+import rpo_solutions1 from "../assets/images/services/features/rpo-solutions/rpo-solutions1.png";
+import rpo_solutions2 from "../assets/images/services/features/rpo-solutions/rpo-solutions2.png";
+import onboarding_support1 from "../assets/images/services/features/onboarding-support/onboarding-support1.jpg";
 
 export const servicesData = [
   {
@@ -41,7 +40,6 @@ export const servicesData = [
         "Our global recruitment framework is designed to simplify hiring across borders and industries. With a strong network of experts and advanced assessment tools, we deliver highly qualified talent that aligns with your company’s culture and goals. From understanding your workforce needs to onboarding new hires, we ensure every step is efficient, transparent, and optimized for results. With our industry insights and global reach, your organization gains the competitive advantage needed to build stronger teams and drive sustainable growth",
       para2:
         "We prioritize quality, reliability, and long-term value, ensuring every hire contributes meaningfully to your organization’s success. By combining global reach with localized expertise, we help companies navigate talent shortages and build high-performing international teams.",
-      bottomVisual: bottomVisual,
     },
 
     galleryImages: [global_recruitment1, global_recruitment2],
@@ -110,7 +108,7 @@ export const servicesData = [
         "We ensure your brand message remains clear and impactful across all communication touchpoints. Our strategic frameworks help align leadership, HR, and marketing teams around a unified voice. Ultimately, we empower your organization to stand out in a competitive market and build deeper connections with top-tier talent.",
     },
 
-    galleryImages: [employer_branding1, employer_branding2],
+    galleryImages: [employer_branding1, onboarding_support],
   },
   {
     id: 3,
@@ -180,6 +178,6 @@ export const servicesData = [
       para2:
         "This streamlined approach helps organizations strengthen engagement, reduce turnover, and build a productive workforce from day one.",
     },
-    galleryImages: [hr_consulting1, hr_consulting2],
+    galleryImages: [hr_consulting1, onboarding_support1],
   },
 ];
