@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import bottomVisual from "../../../assets/images/services/glow.gif"
+import bottomVisual from "../../../assets/images/services/other/glow.gif"
 
 export default function DetailSection({ subSection }) {
   return (
@@ -21,7 +21,7 @@ export default function DetailSection({ subSection }) {
         </div>
 
         <div className="relative flex justify-center items-center">
-          <div className="absolute w-[350px] h-[350px] bg-purple-500/20 blur-[120px] rounded-full"></div>
+          <div className="absolute w-[350px] h-[350px] rounded-full"></div>
 
           <div className="relative w-[320px] h-[320px] md:w-[400px] md:h-[400px]">
             <Image
