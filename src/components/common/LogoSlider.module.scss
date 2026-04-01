@@ -38,6 +38,10 @@
   min-width: max-content;
 }
 
+.container:hover .marquee {
+  animation-play-state: paused;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0%);

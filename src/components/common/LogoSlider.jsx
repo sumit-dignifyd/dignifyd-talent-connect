@@ -1,7 +1,21 @@
 import Image from "next/image";
 import styles from "./LogoSlider.module.scss";
+import wipro from "../../assets/images/home/logos/wipro.png";
 
-const LogoSlider = ({ logos }) => {
+const logos = [
+  wipro,
+  wipro,
+  wipro,
+  wipro,
+  wipro,
+  wipro,
+  wipro,
+  wipro,
+  wipro,
+  wipro,
+];
+
+const LogoSlider = () => {
   return (
     <>
       <div className={styles.container}>
@@ -11,7 +25,7 @@ const LogoSlider = ({ logos }) => {
         <div className={styles.marquee}>
           {[...logos, ...logos].map((logo, index) => (
             <div key={index} className={styles.logoItem}>
-              <div className="relative flex h-12 w-24 items-center justify-center rounded-xl border border-black/10 bg-white p-3 shadow-sm transition-all duration-300 hover:scale-105 md:h-16 md:w-32">
+              <div className="relative flex h-12 w-24 items-center justify-center rounded-xl border border-black/10 p-3 shadow-sm transition-all duration-300 hover:scale-105 md:h-16 md:w-32">
                 <Image
                   src={logo}
                   alt="logo"
