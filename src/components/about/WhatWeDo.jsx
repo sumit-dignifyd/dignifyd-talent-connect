@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import team from "../../assets/images/aboutUs/team.jpg";
+import team from "../../assets/images/aboutUs/whatwedo/whatwedo.jpg";
+import SectionHeader from "../common/SectionHeader";
 
 export default function WhatWeDo() {
   return (
@@ -25,19 +26,17 @@ export default function WhatWeDo() {
             <span className="text-sm text-gray-400">What We Do</span>
           </div>
 
-          <h2 className="mb-6 text-3xl leading-tight font-semibold text-white md:text-4xl">
-            Our platform simplifies the way people manage tasks, collaborate,
-            and scale their operations — all in one place.
-          </h2>
+          <SectionHeader
+            title={
+              "Our platform simplifies the way people manage tasks, collaborate, and scale their operations — all in one place."
+            }
+            description={
+              " Whether you're a growing startup or a global enterprise, we provide the tools you need to streamline your workflow, automate what slows you down, and focus on what drives results. From real-time collaboration and intelligent automation to seamless integrations and enterprise-grade security, we’re here to make your day-to-day operations smoother."
+            }
+            center={false}
+          />
 
-          <p className="mb-8 max-w-xl text-sm leading-relaxed text-gray-400">
-            Whether you're a growing startup or a global enterprise, we provide
-            the tools you need to streamline your workflow, automate what slows
-            you down, and focus on what drives results. From real-time
-            collaboration and intelligent automation to seamless integrations
-            and enterprise-grade security, we’re here to make your day-to-day
-            operations smoother.
-          </p>
+          <p className="mb-8 max-w-xl text-sm leading-relaxed text-gray-400"></p>
 
           <button className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.4)] transition hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
             Get Started
