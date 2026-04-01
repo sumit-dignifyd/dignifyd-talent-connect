@@ -6,7 +6,7 @@
 
   width: 100%;
   max-width: 400px;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   margin: 0 auto;
 }
 
@@ -55,40 +55,44 @@
 
 .orbitIcon {
   position: absolute;
-  width: 12%;
-  height: 12%;
-  min-width: 36px;
-  min-height: 36px;
+
+  width: clamp(40px, 10%, 40px);
+  height: clamp(40px, 10%, 40px);
+
   border-radius: 999px;
   background: #0f0f0f;
   border: 1px solid rgba(168, 85, 247, 0.4);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
   transition: transform 0.3s ease;
 }
 
 .iconOuter1 {
-  top: -6%;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -40%);
 }
+
 .iconOuter2 {
-  bottom: -6%;
+  bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 40%);
 }
 
 .iconMiddle1 {
-  left: -6%;
+  left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-40%, -50%);
 }
+
 .iconMiddle2 {
-  right: -6%;
+  right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(40%, -50%);
 }
 
 .pulse {
@@ -123,4 +127,16 @@
 
 .wrapper:hover .orbitIcon {
   transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    max-width: 280px;
+  }
 }
