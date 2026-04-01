@@ -73,7 +73,7 @@ export const getInTouchLinks = [
   },
   {
     label: "dignifyd-sap.com",
-    href: "dignifyd-sap.com",
+    href: "https://dignifyd-sap.com/",
   },
   {
     label: "dignifyd.tech",
