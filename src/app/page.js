@@ -9,7 +9,7 @@ import Testimonials from "@/components/common/Testimonials";
 import Contact from "@/components/home/Contact";
 import FAQs from "@/components/common/FAQs";
 import Jobs from "@/components/home/Jobs";
-import banner_bg from "../assets/images/home/banner-img.png";
+import banner_bg from "../assets/images/home/banner/banner-img.png";
 import { hrFAQs } from "@/data/faqs";
 import Schema from "@/components/common/seo/Schema";
 import { homeSchema } from "@/data/schemas/homeSchema";
