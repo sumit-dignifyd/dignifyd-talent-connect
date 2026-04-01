@@ -1,5 +1,5 @@
 import FAQs from "@/components/common/FAQs";
-import FAQForm from "@/components/FAQs/FAQForm";
+import ServiceForm from "@/components/common/ServiceForm";
 import Banner from "@/components/home/Banner";
 import { hrFAQs } from "@/data/faqs";
 
@@ -19,7 +19,7 @@ const FAQPage = () => {
         badge={"Answers At Your Fingertips"}
         title={"Your Questions, Our Answers"}
       />
-      <FAQForm />
+      <ServiceForm/>
     </>
   );
 };
