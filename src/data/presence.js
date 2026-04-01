@@ -42,7 +42,7 @@ export const Ourpresence = [
     name: "India",
     location: "C-64, Upper Ground Floor,Sector-2, Noida, Delhi NCR",
     contact: "+91-120-450-6748",
-    shortForm: "APAC",
+    shortForm: "IND",
     image: india,
   },
 ];
