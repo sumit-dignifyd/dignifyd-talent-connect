@@ -2,7 +2,7 @@ import SectionHeader from "@/components/common/SectionHeader";
 import styles from "./Testimonials.module.scss";
 import Image from "next/image";
 
-import avatar from "../../assets/images/home/avatar.jpg";
+import avatar from "../../assets/images/home/testimonials/avatar.jpg";
 
 const data = [
   {
@@ -60,7 +60,6 @@ export default function Testimonials() {
           badge={"Testimonials"}
           title={"Client Experiences: Success Narratives And Reviews"}
         />
-
         <div className={`mt-16 ${styles.wrapper}`}>
           <div className={styles.fadeLeft} />
           <div className={styles.fadeRight} />

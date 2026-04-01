@@ -37,6 +37,11 @@
   animation: scrollRight 40s linear infinite;
 }
 
+.wrapper:hover .scrollLeft,
+.wrapper:hover .scrollRight {
+  animation-play-state: paused;
+}
+
 @keyframes scrollLeft {
   0% {
     transform: translateX(0%);
