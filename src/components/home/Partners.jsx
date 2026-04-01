@@ -1,12 +1,12 @@
-import oppo from "../../assets/images/home/oppo.png";
-import derma from "../../assets/images/home/derma.png";
-import minimalist from "../../assets/images/home/minimalist.png";
-import ICCPL from "../../assets/images/home/ICCPL.webp";
-import nivea from "../../assets/images/home/nivea.png";
-import mamaearth from "../../assets/images/home/mamaearth.png";
-import india_filings from "../../assets/images/home/india-filings.webp";
-import cordelia_cruises from "../../assets/images/home/cordelia-cruises.webp";
-import roca from "../../assets/images/home/roca.webp";
+import oppo from "../../assets/images/home/logos/oppo.png";
+import derma from "../../assets/images/home/logos/derma.png";
+import minimalist from "../../assets/images/home/logos/minimalist.png";
+import ICCPL from "../../assets/images/home/logos/ICCPL.webp";
+import nivea from "../../assets/images/home/logos/nivea.png";
+import mamaearth from "../../assets/images/home/logos/mamaearth.png";
+import india_filings from "../../assets/images/home/logos/india-filings.webp";
+import cordelia_cruises from "../../assets/images/home/logos/cordelia-cruises.webp";
+import roca from "../../assets/images/home/logos/roca.webp";
 import LogoSlider from "../common/LogoSlider";
 
 const Partners = () => {

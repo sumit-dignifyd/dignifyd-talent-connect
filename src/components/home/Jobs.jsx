@@ -1,9 +1,9 @@
 import SectionHeader from "@/components/common/SectionHeader";
 import { Building2, MapPinHouse } from "lucide-react";
 import Link from "next/link";
-import uiUX from "../../assets/images/home/UI-UX.jpg";
-import developer_img from "../../assets/images/home/frontEnd-Developer.jpg";
-import graphic_designer from "../../assets/images/home/graphic-designer.jpg";
+import uiUX from "../../assets/images/home/jobs/UI-UX.jpg";
+import developer_img from "../../assets/images/home/jobs/frontEnd-Developer.jpg";
+import graphic_designer from "../../assets/images/home/jobs/graphic-designer.jpg";
 import Image from "next/image";
 
 const jobs = [
@@ -31,10 +31,7 @@ export default function Jobs() {
   return (
     <section className="w-full bg-black py-24">
       <div className="mx-auto max-w-7xl text-center">
-        <SectionHeader
-          badge={"Dream Big, Achieve Bigger"}
-          title={"Discover Roles That Match Your Ambition"}
-        />
+        <SectionHeader badge={"Dream Big, Achieve Bigger"} title={"Discover Roles That Match Your Ambition"} />
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {jobs.map((job, i) => (
@@ -43,10 +40,7 @@ export default function Jobs() {
         </div>
 
         <div className="mt-14">
-          <Link
-            href={{ pathname: "/careers", hash: "jobs" }}
-            className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 text-sm font-medium text-white shadow-[0_0_25px_rgba(168,85,247,0.4)] cursor-pointer"
-          >
+          <Link href={{ pathname: "/careers", hash: "jobs" }} className="cursor-pointer rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 text-sm font-medium text-white shadow-[0_0_25px_rgba(168,85,247,0.4)]">
             View All Jobs →
           </Link>
         </div>
@@ -58,23 +52,15 @@ export default function Jobs() {
 function JobCard({ job }) {
   return (
     <div className="group relative rounded-3xl border border-purple-500/20 bg-gradient-to-b from-[#140a25] to-[#0b0615] p-6 shadow-[0_0_40px_rgba(168,85,247,0.08)] transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_0_60px_rgba(168,85,247,0.2)]">
-      <div className="mb-6 rounded-xl border border-white/10 bg-white/5 p-4">
+      <div className="mb-6 rounded-xl border border-white/10 bg-white/5 p-2">
         <div className="relative h-40 w-full overflow-hidden">
-          <Image
-            src={job.img}
-            alt={job.title}
-            fill
-            sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover transition duration-500 group-hover:scale-105"
-          />
+          <Image src={job.img} alt={job.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
         </div>
       </div>
 
-      <h3 className="flex mb-2 text-lg font-semibold text-white">
-        {job.title}
-      </h3>
+      <h3 className="mb-2 flex text-lg font-semibold text-white">{job.title}</h3>
 
       <p className="flex items-center gap-2 text-sm text-gray-400">
         <Building2 size={16} className="text-purple-400" /> {job.company}
@@ -85,10 +71,7 @@ function JobCard({ job }) {
       </p>
 
       <div className="mt-6 flex justify-start">
-        <Link
-          href={"/careers/1"}
-          className="text-sm text-purple-400 transition hover:text-purple-300 cursor-pointer"
-        >
+        <Link href={"/careers/1"} className="cursor-pointer text-sm text-purple-400 transition hover:text-purple-300">
           Apply Now →
         </Link>
       </div>

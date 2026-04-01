@@ -1,5 +1,5 @@
 import Image from "next/image";
-import banner_img from "../../assets/images/aboutUs/banner-bg.png";
+import banner_img from "../../assets/images/aboutUs/banner/banner-bg.png";
 export default function Banner({
   banner_bg = banner_img,
   badge,

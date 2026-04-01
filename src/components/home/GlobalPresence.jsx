@@ -1,6 +1,6 @@
 import SectionHeader from "@/components/common/SectionHeader";
 import Image from "next/image";
-import presence from "../../assets/images/home/presence-frame.png";
+import presence from "../../assets/images/home/globalPresence/presence-frame.png";
 
 export default function GlobalPresence() {
   return (
