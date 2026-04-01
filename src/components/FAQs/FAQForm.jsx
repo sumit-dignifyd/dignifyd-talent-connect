@@ -1,22 +1,27 @@
 "use client";
 
+import Link from "next/link";
+import SectionHeader from "../common/SectionHeader";
+
 export default function FAQForm() {
   return (
     <section className="w-full bg-black py-24">
       <div className="mx-auto max-w-5xl xl:max-w-6xl">
         <div className="rounded-[28px] border border-white/10 bg-gradient-to-br from-[#0b0615] to-[#05030a] p-10 shadow-[0_0_60px_rgba(168,85,247,0.08)] backdrop-blur-xl md:p-14">
-          <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">
-            Say, Hello !
-          </h2>
+          <SectionHeader
+            title={"Say, Hello !"}
+            description={
+              "Tell us a bit about yourself, then schedule time with one of our experts who will show you exactly how you can power up your results!"
+            }
+            center={false}
+          />
 
-          <p className="mb-4 max-w-2xl text-sm text-gray-400">
-            Tell us a bit about yourself, then schedule time with one of our
-            experts who will show you exactly how you can power up your results!
-          </p>
-
-          <p className="mb-10 cursor-pointer text-sm text-gray-400 underline">
+          <Link
+            href="#"
+            className="mb-10 cursor-pointer text-sm text-gray-400 underline"
+          >
             Click here to see if you're a good fit
-          </p>
+          </Link>
 
           <form className="space-y-8">
             <div>
