@@ -1,3 +1,4 @@
+import { Check } from "lucide-react";
 import SectionHeader from "../common/SectionHeader";
 
 export default function JobDetails() {
@@ -28,8 +29,8 @@ export default function JobDetails() {
               "Build strong relationships with dealers, distributors & retailers",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-4">
-                <div className="w-6 h-6 flex items-center justify-center rounded-full border border-purple-500">
-                  <span className="text-purple-400 text-sm">✓</span>
+                <div className="flex h-[28px] min-w-[28px] items-center justify-center rounded-full border border-purple-500">
+                  <Check size={16} className="text-purple-400" />
                 </div>
 
                 <p className="text-gray-300">{item}</p>
