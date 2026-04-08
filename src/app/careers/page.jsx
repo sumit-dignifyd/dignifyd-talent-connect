@@ -4,7 +4,13 @@ import CTASection from "@/components/common/CTA";
 import FAQs from "@/components/common/FAQs";
 import Testimonials from "@/components/common/Testimonials";
 import { hrFAQs } from "@/data/faqs";
-const Careers = () => {
+
+export const metadata = {
+  title: "Careers | Dignifyd Talent Connect",
+  description:
+    "Join our team at Dignifyd Talent Connect and be part of a dynamic, innovative company that's shaping the future of recruitment. Explore our career opportunities and discover how you can make an impact with us.",
+};
+const Careers = async () => {
   return (
     <>
       <Banner

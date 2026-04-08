@@ -3,6 +3,12 @@ import ServiceForm from "@/components/common/ServiceForm";
 import Banner from "@/components/home/Banner";
 import { hrFAQs } from "@/data/faqs";
 
+export const metadata = {
+  title: "FAQs | Dignifyd Talent Connect",
+  description:
+    "Find answers to common questions about Dignifyd Talent Connect, our AI recruitment platform. Get clarity on how we can help you hire smarter and find jobs faster.",
+};
+
 const FAQPage = () => {
   return (
     <>

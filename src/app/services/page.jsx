@@ -4,6 +4,12 @@ import Newsletter from "@/components/contact/NewsLetter";
 import Collaboration from "@/components/home/Collaboration";
 import ServicesGrid from "@/components/services/ServicesGrid";
 
+export const metadata = {
+  title: "Services | Dignifyd Talent Connect",
+  description:
+    "Explore our comprehensive range of services designed to help you hire smarter and find jobs faster. From talent acquisition to workforce growth, we provide innovative solutions that drive measurable results for modern organizations.",
+};
+
 const Services = () => {
   return (
     <>
