@@ -7,6 +7,12 @@ import LeaderShip from "@/components/about/LeaderShip";
 import OurPeopleOurBrand from "@/components/about/OurPeopleOurBrand";
 import TechSupport from "@/components/about/TechSupport";
 import CTASection from "@/components/common/CTA";
+
+export const metadata = {
+  title: "About Us | Dignifyd Talent Connect",
+  description:
+    "Discover a smarter approach to hiring designed for modern organizations. From talent acquisition to workforce growth, we help businesses find the right people, build stronger teams, and achieve sustainable success.",
+};
 const AboutUs = () => {
   return (
     <>
