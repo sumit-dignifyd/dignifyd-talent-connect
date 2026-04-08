@@ -3,11 +3,20 @@
 import { useState } from "react";
 import SectionHeader from "../common/SectionHeader";
 import { Upload } from "lucide-react";
+import { useDropzone } from "react-dropzone";
 
 export default function ApplyJobForm() {
   const [fileName, setFileName] = useState("No file chosen");
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop: (acceptedFiles) => {
+      if (acceptedFiles.length > 0) {
+        setFileName(acceptedFiles[0].name);
+      }
+    },
+    multiple: false,
+  });
   return (
-    <section className="w-full bg-black py-24">
+    <section className="w-full bg-black py-10">
       <div className="mx-auto max-w-6xl text-center">
         <SectionHeader badge={"Apply Now"} title={"Apply For This Job"} />
 
@@ -17,16 +26,22 @@ export default function ApplyJobForm() {
           <div className="relative grid grid-cols-1 gap-10 md:grid-cols-2">
             <div className="space-y-8">
               <div>
-                <label className="text-sm text-gray-400">Your Name*</label>
+                <label htmlFor="name" className="text-sm text-gray-400">
+                  Your Name*
+                </label>
                 <input
+                  id="name"
                   type="text"
                   className="mt-2 w-full border-b border-white/20 bg-transparent py-2 text-white outline-none focus:border-purple-500"
                 />
               </div>
 
               <div>
-                <label className="text-sm text-gray-400">Mobile Number*</label>
+                <label htmlFor="phone" className="text-sm text-gray-400">
+                  Mobile Number*
+                </label>
                 <input
+                  id="phone"
                   type="text"
                   className="mt-2 w-full border-b border-white/20 bg-transparent py-2 text-white outline-none focus:border-purple-500"
                 />
@@ -35,16 +50,22 @@ export default function ApplyJobForm() {
 
             <div className="space-y-8">
               <div>
-                <label className="text-sm text-gray-400">Email Address*</label>
+                <label htmlFor="email" className="text-sm text-gray-400">
+                  Email Address*
+                </label>
                 <input
+                  id="email"
                   type="email"
                   className="mt-2 w-full border-b border-white/20 bg-transparent py-2 text-white outline-none focus:border-purple-500"
                 />
               </div>
 
               <div>
-                <label className="text-sm text-gray-400">Job Title*</label>
+                <label htmlFor="job-title" className="text-sm text-gray-400">
+                  Job Title*
+                </label>
                 <input
+                  id="job-title"
                   type="text"
                   className="mt-2 w-full border-b border-white/20 bg-transparent py-2 text-white outline-none focus:border-purple-500"
                 />
@@ -53,8 +74,11 @@ export default function ApplyJobForm() {
           </div>
 
           <div className="mt-10">
-            <label className="text-sm text-gray-400">Additional Messages</label>
+            <label htmlFor="message" className="text-sm text-gray-400">
+              Additional Messages
+            </label>
             <textarea
+              id="message"
               rows={3}
               className="mt-2 w-full resize-none border-b border-white/20 bg-transparent py-2 text-white outline-none focus:border-purple-500"
             />
@@ -62,36 +86,32 @@ export default function ApplyJobForm() {
 
           <div className="mt-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-4 rounded-xl border border-white/20 px-4 py-2">
-                <input
-                  type="file"
-                  id="fileUpload"
-                  className="hidden"
-                  onChange={(e) => {
-                    if (e.target.files.length > 0) {
-                      setFileName(e.target.files[0].name);
-                    }
-                  }}
-                />
+              <label
+                htmlFor="file-upload"
+                {...getRootProps()}
+                className={`flex cursor-pointer items-center gap-4 rounded-xl border px-4 py-3 transition ${
+                  isDragActive
+                    ? "border-purple-500 bg-purple-500/10"
+                    : "border-white/20"
+                }`}
+              >
+                <input id="file-upload" {...getInputProps()} />
 
-                <label
-                  htmlFor="fileUpload"
-                  className="ml-[-5px] flex cursor-pointer items-center gap-2 rounded-lg bg-purple-500 px-4 py-2 text-sm text-white transition hover:bg-purple-600"
-                >
+                <div className="flex items-center gap-2 rounded-lg bg-purple-500 px-4 py-2 text-sm text-white">
                   <Upload size={14} /> Upload
-                </label>
+                </div>
 
-                <span className="max-w-[150px] truncate text-sm text-gray-400">
+                <span className="max-w-[180px] truncate text-sm text-gray-400">
                   {fileName}
                 </span>
-              </div>
+              </label>
 
               <p className="text-xs text-gray-400">
                 *Upload your resume in pdf, jpg, png, or doc format.
               </p>
             </div>
 
-            <button className="rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-10 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] cursor-pointer">
+            <button className="cursor-pointer rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-10 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.6)]">
               Send Message
             </button>
           </div>
