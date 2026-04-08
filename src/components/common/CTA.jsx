@@ -1,3 +1,5 @@
+import Magnetic from "./Magnetic";
+
 export default function CTASection({
   leading_title,
   supporting_title,
@@ -21,9 +23,11 @@ export default function CTASection({
         </p>
 
         <div className="mt-10">
-          <button className="rounded-full cursor-pointer bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_25px_rgba(168,85,247,0.4)] transition hover:shadow-[0_0_35px_rgba(168,85,247,0.6)]">
-            Get started now →
-          </button>
+          <Magnetic>
+            <button className="rounded-full cursor-pointer bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_25px_rgba(168,85,247,0.4)] transition hover:shadow-[0_0_35px_rgba(168,85,247,0.6)]">
+              Get started now →
+            </button>
+          </Magnetic>
         </div>
       </div>
     </section>
