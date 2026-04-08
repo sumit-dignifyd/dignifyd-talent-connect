@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import ArrowRight from "lucide-react/dist/esm/icons/arrow-right"
 import team from "../../assets/images/aboutUs/whatwedo/whatwedo.jpg";
 import SectionHeader from "../common/SectionHeader";
+import Magnetic from "../common/Magnetic";
 
 export default function WhatWeDo() {
   return (
@@ -12,6 +13,7 @@ export default function WhatWeDo() {
             src={team}
             alt="team"
             fill
+            quality={70}
             loading="eager"
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
@@ -37,11 +39,12 @@ export default function WhatWeDo() {
           />
 
           <p className="mb-8 max-w-xl text-sm leading-relaxed text-gray-400"></p>
-
-          <button className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.4)] transition hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
-            Get Started
-            <ArrowRight size={16} />
-          </button>
+          <Magnetic>
+            <button className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.4)] transition hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]">
+              Get Started
+              <ArrowRight size={16} />
+            </button>
+          </Magnetic>
         </div>
       </div>
     </section>
