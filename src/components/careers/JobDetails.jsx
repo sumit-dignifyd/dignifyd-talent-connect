@@ -3,7 +3,7 @@ import SectionHeader from "../common/SectionHeader";
 
 export default function JobDetails() {
   return (
-    <section className="w-full bg-black py-24">
+    <section className="w-full bg-black py-24 mt-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div>
           <SectionHeader
