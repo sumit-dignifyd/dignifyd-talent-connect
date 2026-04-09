@@ -1,5 +1,7 @@
 import Image from "next/image";
 import banner_img from "../../assets/images/aboutUs/banner/banner-bg.png";
+import dynamic from "next/dynamic";
+const Magnetic = dynamic(() => import("../common/Magnetic"));
 export default function Banner({
   banner_bg = banner_img,
   badge,
@@ -10,19 +12,19 @@ export default function Banner({
 }) {
   return (
     <section className="relative flex w-full items-center justify-center overflow-hidden py-20 mt-15">
-      <div className="absolute inset-0">
-        {banner_bg && (
-          <div className="absolute inset-0">
-            <Image
-              src={banner_bg}
-              alt="background"
-              fill
-              priority
-              className="object-cover opacity-100"
-            />
-          </div>
-        )}
-      </div>
+      {banner_bg && (
+        <div className="absolute inset-0">
+          <Image
+            src={banner_bg}
+            alt="background"
+            fill
+            sizes="100vw"
+            priority
+            fetchPriority="high"
+            className="object-cover opacity-100"
+          />
+        </div>
+      )}
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60"></div>
 
@@ -44,11 +46,13 @@ export default function Banner({
         </p>
 
         {btn_text && (
-          <div className="mt-8">
-            <button className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white cursor-pointer">
-              {btn_text}
-            </button>
-          </div>
+          <Magnetic>
+            <div className="mt-8">
+              <button className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white cursor-pointer">
+                {btn_text}
+              </button>
+            </div>
+          </Magnetic>
         )}
       </div>
     </section>
