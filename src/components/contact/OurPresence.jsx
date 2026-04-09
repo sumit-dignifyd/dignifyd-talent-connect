@@ -63,9 +63,7 @@ export default function OurPresence() {
               <div className="space-y-4 text-sm text-gray-400">
                 <div className="flex items-start gap-3">
                   <span className="mt-1 h-4 w-[2px] bg-purple-500"></span>
-                  <span>
-                    {currentPlace?.location}
-                  </span>
+                  <span>{currentPlace?.location}</span>
                 </div>
 
                 <div className="flex items-start gap-3">
@@ -97,6 +95,7 @@ export default function OurPresence() {
         <div className="mt-10 flex justify-end gap-4">
           <button
             onClick={() => handlePlace("prev")}
+            aria-label="Previous location"
             disabled={currentIndex === 0}
             className={`flex h-10 w-10 items-center justify-center rounded-full transition ${currentIndex === 0 ? "cursor-not-allowed border border-white/20 text-white/40" : "border border-white/40 text-white hover:scale-110 hover:bg-white/10 active:scale-95"} `}
           >
@@ -105,6 +104,7 @@ export default function OurPresence() {
 
           <button
             onClick={() => handlePlace("next")}
+            aria-label="Next location"
             disabled={currentIndex === Ourpresence.length - 1}
             className={`flex h-10 w-10 items-center justify-center rounded-full transition ${currentIndex === Ourpresence.length - 1 ? "cursor-not-allowed border border-white/20 text-white/40" : "border border-white/40 text-white hover:scale-110 hover:bg-white/10 active:scale-95"} `}
           >
