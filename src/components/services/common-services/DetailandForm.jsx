@@ -1,5 +1,3 @@
-"use client";
-
 import ServiceForm from "@/components/common/ServiceForm";
 
 export default function DetailandForm({ data }) {
