@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 
 export default function ServiceBanner({ banner_img }) {
@@ -12,6 +11,9 @@ export default function ServiceBanner({ banner_img }) {
                 src={banner_img}
                 alt="world map"
                 fill
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 768px) 100vw, 1280px"
                 className="object-cover opacity-80"
               />
             </div>
