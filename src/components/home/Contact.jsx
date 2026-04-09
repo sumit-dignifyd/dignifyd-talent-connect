@@ -116,8 +116,9 @@ export default function Contact() {
                   {...register("service", {
                     required: "Please select a service",
                   })}
+                  aria-label="services"
                 >
-                  <option value="">Type of service</option>
+                  <option>Type of service</option>
                   <option>Global Recruitment</option>
                   <option>RPO Solutions</option>
                   <option>Employer Branding</option>
