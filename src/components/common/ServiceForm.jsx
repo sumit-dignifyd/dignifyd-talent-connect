@@ -7,7 +7,7 @@ const ServiceForm = () => {
   const { register } = useForm();
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-8 shadow-[0_0_40px_rgba(168,85,247,0.08)] backdrop-blur-xl">
+    <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-4 md:p-8 shadow-[0_0_40px_rgba(168,85,247,0.08)] backdrop-blur-xl">
       <h3 className="mb-3 text-3xl font-semibold text-white">Say, Hello !</h3>
 
       <p className="mb-6 text-sm text-gray-400">
@@ -60,12 +60,20 @@ const ServiceForm = () => {
           />
         </div>
         <div>
-          <label className="mb-2 block text-xs text-gray-300">
+          <label
+            htmlFor="serviceType"
+            className="mb-2 block text-xs text-gray-300"
+          >
             Choose Types of Services
           </label>
 
           <div className={styles.selectWrapper}>
-            <select className={styles.select} defaultValue="">
+            <select
+              id="serviceType"
+              className={styles.select}
+              defaultValue=""
+              {...register("serviceType")}
+            >
               <option value="" disabled hidden>
                 Type of service
               </option>
