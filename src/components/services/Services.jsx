@@ -68,8 +68,14 @@ export default function ServicesSection() {
                     </div>
                   </div>
 
-                  {openStep === 1 && (
-                    <div className="mt-4 space-y-3">
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out ${
+                      openStep === 1
+                        ? "grid-rows-[1fr] opacity-100 mt-4"
+                        : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden space-y-3">
                       <div className="flex justify-between rounded-xl bg-white/5 px-4 py-3 text-sm text-gray-400">
                         Workspace
                         <span className="text-purple-400">Storm</span>
@@ -80,7 +86,7 @@ export default function ServicesSection() {
                         <span>#Alerts</span>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
 
                 <div className="relative z-20 rounded-2xl border border-white/10 bg-black p-4">
@@ -114,8 +120,14 @@ export default function ServicesSection() {
                     </div>
                   </div>
 
-                  {openStep === 2 && (
-                    <div className="mt-4 space-y-3">
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out ${
+                      openStep === 2
+                        ? "grid-rows-[1fr] opacity-100 mt-4"
+                        : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden space-y-3">
                       <div className="flex justify-between rounded-xl bg-white/5 px-4 py-3 text-sm text-gray-400">
                         Workspace
                         <span className="text-purple-400">Storm</span>
@@ -126,7 +138,7 @@ export default function ServicesSection() {
                         <span>#Alerts</span>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
 
                 <div className="relative z-20 rounded-2xl border border-white/10 bg-black p-4">
@@ -170,12 +182,12 @@ export default function ServicesSection() {
 
               <Link
                 href={activeService?.href}
+                aria-label={`Learn more about ${activeService?.label}`}
                 className="group inline-flex items-center gap-1 text-sm text-purple-400"
               >
-                <span className="transition-all group-hover:tracking-wide">
-                  Learn More
-                </span>
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <span>Learn More</span>
+                <span className="sr-only"> about {activeService?.label}</span>
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
