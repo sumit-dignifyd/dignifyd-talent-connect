@@ -53,7 +53,11 @@ export default function Navbar() {
           </button>
         </div>
 
-        <button onClick={() => setOpen(!open)} className="text-white md:hidden">
+        <button
+          onClick={() => setOpen(!open)}
+          className="text-white md:hidden"
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+        >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
@@ -75,7 +79,10 @@ export default function Navbar() {
             className="object-contain"
           />
 
-          <button onClick={() => setOpen(false)}>
+          <button
+            onClick={() => setOpen(false)}
+            aria-label="Close navigation menu"
+          >
             <X size={26} className="text-white" />
           </button>
         </div>
