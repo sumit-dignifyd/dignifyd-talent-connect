@@ -21,6 +21,8 @@ export default function ContactSection() {
                   src={contactImg}
                   alt="team"
                   fill
+                  priority
+                  fetchPriority="high"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
