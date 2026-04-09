@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "../../assets/images/home/footer/dignifyd-logo-white.png";
 import x_logo from "../../assets/images/home/footer/X.png";
-// import gitHub_logo from "../../assets/images/home/git-Hub.png";
+import gitHub_logo from "../../assets/images/home/footer/github.png";
 import linkedin_logo from "../../assets/images/home/footer/Linkedin.png";
 import Link from "next/link";
 import styles from "../common/Footer.module.scss";
@@ -36,7 +36,7 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-4">
-              {[x_logo, linkedin_logo].map((item, i) => (
+              {[x_logo, gitHub_logo, linkedin_logo].map((item, i) => (
                 <div
                   key={i}
                   className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 shadow-[0_0_20px_rgba(168,85,247,0.3)] transition hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]"
@@ -54,9 +54,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-5 text-sm tracking-wider text-gray-300 uppercase">
+            <h3 className="mb-5 text-sm tracking-wider text-gray-300 uppercase">
               Quick Links
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm text-gray-400">
               {NAV_LINKS.map((item, i) => (
                 <li key={i}>
@@ -69,9 +69,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-5 text-sm tracking-wider text-gray-300 uppercase">
+            <h3 className="mb-5 text-sm tracking-wider text-gray-300 uppercase">
               Services
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm text-gray-400">
               {tabs.map((item, i) => (
                 <li key={i}>
@@ -84,9 +84,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-5 text-sm tracking-wider text-gray-300 uppercase">
+            <h3 className="mb-5 text-sm tracking-wider text-gray-300 uppercase">
               Recruitment
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm text-gray-400">
               {recruitmentLinks.map((item, i) => (
                 <li key={i}>
@@ -106,9 +106,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-5 text-sm tracking-wider text-gray-300 uppercase">
+            <h3 className="mb-5 text-sm tracking-wider text-gray-300 uppercase">
               Get In Touch With Us
-            </h4>
+            </h3>
 
             <ul className="space-y-3 text-sm text-gray-400">
               {getInTouchLinks.map((item, i) => (
@@ -117,14 +117,16 @@ export default function Footer() {
                   item.href.startsWith("tel:") ? (
                     <a
                       href={item.href}
-                      className={
-                        item.href.startsWith("mailto:") ? "underline" : ""
-                      }
+                      className={`break-words ${item.href.startsWith("mailto:") ? "underline" : ""}`}
                     >
                       {item.label}
                     </a>
                   ) : (
-                    <Link href={item.href} target="_blank" className="underline">
+                    <Link
+                      href={item.href}
+                      target="_blank"
+                      className="underline break-words"
+                    >
                       {item.label}
                     </Link>
                   )}
@@ -139,7 +141,7 @@ export default function Footer() {
             <h3 className="mb-2 text-lg text-white">
               Get free note-taking workflows
             </h3>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-white/50">
               Copyright © 2026 Dignityd Talent Connect. All rights reserved.
             </p>
           </div>
