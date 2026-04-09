@@ -1,5 +1,3 @@
-"use client";
-
 import { tabs } from "@/data/navigation";
 import styles from "../common-services/ServicesTabs.module.scss";
 
