@@ -70,7 +70,7 @@ function JobCard({ job }) {
         <MapPinHouse size={16} className="text-purple-400" /> {job.location}
       </p>
 
-      <div className="mt-6 flex justify-start">
+      <div className="mt-6 flex justify-end">
         <Link href={"/careers/1"} className="cursor-pointer text-sm text-purple-400 transition hover:text-purple-300">
           Apply Now →
         </Link>
