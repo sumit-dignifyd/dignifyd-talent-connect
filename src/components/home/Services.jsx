@@ -1,7 +1,6 @@
 import SectionHeader from "@/components/common/SectionHeader";
 import styles from "./Services.module.scss";
 import {
-  Image as ImgIcon,
   Globe,
   ChevronsLeftRightEllipsis,
   Puzzle,
