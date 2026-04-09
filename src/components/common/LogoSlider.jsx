@@ -28,7 +28,7 @@ const LogoSlider = () => {
               <div className="relative flex h-12 w-24 items-center justify-center rounded-xl border border-black/10 p-3 shadow-sm transition-all duration-300 hover:scale-105 md:h-16 md:w-32">
                 <Image
                   src={logo}
-                  alt="logo"
+                  alt={`${logo} company logo`}
                   fill
                   sizes="(max-width:768px) 96px, 128px"
                   className="object-contain"
