@@ -1,6 +1,6 @@
 import SectionHeader from "@/components/common/SectionHeader";
 import Image from "next/image";
-import presence from "../../assets/images/home/globalPresence/presence-frame.png";
+import presence from "../../assets/images/home/globalPresence/presence-frame.webp";
 
 export default function GlobalPresence() {
   return (
@@ -11,7 +11,7 @@ export default function GlobalPresence() {
           title={"Scaling Businesses Across Continents"}
         />
 
-        <div className="relative w-full overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl md:p-6">
+        <div className="relative w-full overflow-hidden rounded-3xl">
           <div className="relative h-[300px] w-full md:h-[500px]">
             <Image
               src={presence}
