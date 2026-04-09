@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Check } from "lucide-react";
 
@@ -33,7 +32,7 @@ export default function FeaturesAndList({ features, featuredImages }) {
             {features.map((item, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="flex h-[28px] min-w-[28px] items-center justify-center rounded-full border border-purple-500">
-                  <Check size={16} className="text-purple-400" />
+                  <Check size={16} className="text-white" />
                 </div>
 
                 <p className="text-sm leading-relaxed text-gray-300">{item}</p>
