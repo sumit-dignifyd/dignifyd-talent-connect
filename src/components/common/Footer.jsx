@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../assets/images/home/footer/dignifyd-logo-white.png";
+import logo from "../../assets/images/home/footer/dignifyd-logo.svg";
 import x_logo from "../../assets/images/home/footer/X.png";
 import gitHub_logo from "../../assets/images/home/footer/github.png";
 import linkedin_logo from "../../assets/images/home/footer/Linkedin.png";
@@ -148,7 +148,7 @@ export default function Footer() {
 
           <div className="flex w-full md:w-auto">
             <input
-              type="email"
+              type="text"
               placeholder="Enter your email"
               className="w-full rounded-l-full border border-purple-500/20 bg-[#1a0f2e] px-4 py-3 text-sm text-white outline-none md:w-72"
             />

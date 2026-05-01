@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-import logo from "../../assets/images/home/footer/dignifyd-logo-white.png";
+import logo from "../../assets/images/home/footer/dignifyd-logo.svg";
 import { NAV_LINKS } from "@/data/navigation";
 
 export default function Navbar() {
@@ -29,7 +29,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-10 md:flex">
+        <nav className="hidden items-center gap-10 lg:flex">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.path;
 
@@ -45,7 +45,7 @@ export default function Navbar() {
           })}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <button className="relative rounded-full px-5 py-2 text-sm text-white cursor-pointer">
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
             <span className="absolute inset-[1px] rounded-full bg-black"></span>
@@ -55,7 +55,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="text-white md:hidden"
+          className="text-white lg:hidden"
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
         >
           {open ? <X size={26} /> : <Menu size={26} />}
@@ -64,11 +64,11 @@ export default function Navbar() {
 
       <div
         onClick={() => setOpen(false)}
-        className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${open ? "visible opacity-100" : "invisible opacity-0"}`}
+        className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${open ? "visible opacity-100" : "invisible opacity-0"}`}
       />
 
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-[80%] max-w-sm transform bg-black/95 px-6 py-6 backdrop-blur-xl transition-transform duration-300 md:hidden ${open ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 z-50 h-full w-[80%] max-w-sm transform bg-black/95 px-6 py-6 backdrop-blur-xl transition-transform duration-300 ease-in-out lg:hidden ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="mb-8 flex items-center justify-between">
           <Image
@@ -103,7 +103,7 @@ export default function Navbar() {
             );
           })}
 
-          <button className="relative mt-6 rounded-full px-5 py-3 text-sm text-white cursor-pointer">
+          <button className="relative mt-6 rounded-full px-5 py-3 text-sm text-white cursor-pointer bg-red">
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
             <span className="absolute inset-[1px] rounded-full bg-black"></span>
             <span className="relative z-10">Work With Us</span>

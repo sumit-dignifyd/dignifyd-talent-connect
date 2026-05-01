@@ -1,6 +1,19 @@
 .container {
   position: relative;
   overflow: hidden;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+.logoItem {
+  flex: 0 0 auto;
 }
 
 .fadeLeft,
@@ -23,29 +36,15 @@
   background: linear-gradient(to left, #000, transparent);
 }
 
-.marquee {
-  display: flex;
-  width: max-content;
-  gap: 60px;
-  align-items: center;
-  animation: scroll 30s linear infinite;
-}
-
-.logoItem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: max-content;
-}
-
-.container:hover .marquee {
+.container:hover .track {
   animation-play-state: paused;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }

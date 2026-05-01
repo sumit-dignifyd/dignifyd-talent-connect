@@ -36,18 +36,8 @@ export const leadershipTeam = [
 
 export const ourBrandTeam = [
   {
-    img: shivi,
-    name: "Shivi Solanki",
-    role: "Compliance Officer",
-  },
-  {
     img: ashish,
     name: "Ashish Tyagi",
-    role: "Talent Acquisition Executive",
-  },
-  {
-    img: krishna,
-    name: "Krishna Gupta",
     role: "Talent Acquisition Executive",
   },
   {

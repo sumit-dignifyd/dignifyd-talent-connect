@@ -1,14 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import vision from "../../assets/images/aboutUs/missionandvision/vision.png";
 
 import { SparklesIcon } from "lucide-react";
 import SectionHeader from "../common/SectionHeader";
+import { socket } from "@/utils/soket";
 
 export default function VisionMission() {
   const [active, setActive] = useState("vision");
+
+  useEffect(() => {
+    socket.connect();
+
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
 
   return (
     <section className="w-full bg-black py-24">

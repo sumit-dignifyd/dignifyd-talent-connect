@@ -1,8 +1,8 @@
 import SectionHeader from "@/components/common/SectionHeader";
-import { logos } from "@/data/logos";
 import Image from "next/image";
 import Link from "next/link";
 import Magnetic from "../common/Magnetic";
+import { collaborations } from "@/data/logos";
 
 export default function Collaboration() {
   return (
@@ -19,7 +19,7 @@ export default function Collaboration() {
         <div className="relative mt-14 rounded-[28px] bg-gradient-to-r from-purple-500/30 via-pink-500/20 to-purple-500/30 p-[1px] md:mt-20 md:rounded-[32px]">
           <div className="overflow-hidden rounded-[28px] border border-white/10 bg-black/80 backdrop-blur-2xl md:rounded-[32px]">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
-              {logos.map((logo, i) => (
+              {collaborations.map((logo, i) => (
                 <div
                   key={i}
                   className="group flex h-[100px] items-center justify-center border border-white/5 sm:h-[110px] md:h-[140px]"

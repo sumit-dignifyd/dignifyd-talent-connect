@@ -31,7 +31,7 @@ export default function OurPresence() {
           }
         />
 
-        <div className="grid items-center gap-5 md:grid-cols-3">
+        <div className="grid items-center gap-5 md:grid-cols-2 lg:grid-cols-3">
           <div className="hidden justify-center md:flex">
             <div className="relative h-[260px] w-[260px]">
               <Image
@@ -81,7 +81,7 @@ export default function OurPresence() {
             </div>
           </div>
 
-          <div className="relative h-[260px] w-full overflow-hidden rounded-r-[24px] rounded-l-none md:h-[289px]">
+          <div className="relative h-[260px] w-full overflow-hidden rounded-r-[24px] rounded-l-nonemd:h-[320px] lg:h-[269px]">
             <Image
               src={currentPlace?.image}
               alt="presence"

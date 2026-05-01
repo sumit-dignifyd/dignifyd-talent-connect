@@ -44,7 +44,6 @@ export default function TermsConditions() {
               acceptance of any updates.
             </p>
 
-            {/* Contact Box */}
             <div className="mt-10 rounded-xl border border-purple-500/20 bg-gradient-to-r from-purple-600/10 to-pink-600/10 p-6">
               <p className="text-gray-300">
                 If you have any questions regarding these terms, contact us at

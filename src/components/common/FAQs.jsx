@@ -26,7 +26,7 @@ function FAQs({ FAQs, badge, title }) {
                 className={`cursor-pointer rounded-2xl transition-all duration-300 ${
                   isActive
                     ? "border border-purple-500/30 bg-gradient-to-r from-[#1a0f2e] to-[#140a25] shadow-[0_0_40px_rgba(168,85,247,0.15)]"
-                    : "border border-white/5 bg-[#0b0b0b]"
+                    : "border border-white/5 bg-[#0b0b0b] hover:bg-gradient-to-r from-[#1a0f2e] to-[#140a25]"
                 }`}
               >
                 <div className="flex items-center justify-between px-6 py-5">
